@@ -1,0 +1,44 @@
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+// WINDOW SIZE
+$mobile: 576px;
+$tablet: 992px;
+$desktop: 1280px;
+
+// FONTS
+$light: 200;
+$regular: 400;
+$bold: 600;
+$title: 2rem;
+$subtitle: 1.5rem;
+$text: 1.2rem;
+$caption: .8rem;
+
+// COLORS
+$bg: #ede7e3;
+$blue100: #82c0cc;
+$blue300: #489fb5;
+$blue500: #16697a;
+$gray100: #cfd0d3;
+$gray500: #7d8597;
+$yellow: #ffa62b;
+$red: #a0001c;
+$green: #a5be00;
+$black: #343232;
+
+// BORDER
+$defaultRadius: 8px;
+$innerRadius: 4px;
+$border: 2px solid;
+
+// GENERIC
+$transition: all ease-in-out .4s;
+$opacity: .5;
+
+// STYLES
+body{
+  font-size: 1.2rem;
+  background: $bg;
+}

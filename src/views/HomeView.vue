@@ -1,30 +1,27 @@
 <template>
-  <Container>
-    <template v-if="products == null">
-      <Loading />
-    </template>
-    <template v-else>
-      <template v-for="product in products" :key="product.id">
+  <template v-if="products == null">
+    <Loading />
+  </template>
+  <template v-else>
+    <template v-for="product in products" :key="product.id">
 
-        <Products>
-          <template #Name>
-            {{product.descricao}}
-          </template>
-          <template #Price>
-            {{formatCurrency(product.valoUnitario)}}
-          </template>
-        </Products>
+      <Products>
+        <template #Name>
+          {{product.descricao}}
+        </template>
+        <template #Price>
+          {{formatCurrency(product.valoUnitario)}}
+        </template>
+      </Products>
 
-      </template>
     </template>
-  </Container>
+  </template>
 </template>
 
 <script setup>
 import { onMounted, ref } from "vue";
 import api from '../axios/index';
 import { formatCurrency } from '../utils'
-
 
 const products = ref(null)
 async function getProduct() {
@@ -41,6 +38,7 @@ async function getProduct() {
 onMounted(() => {
   getProduct();
 })
+
 </script>
 
 <style lang="scss">

@@ -18,13 +18,32 @@
         </p>
       </div>
     </div>
+
+    <div class="card__btn">
+      <Btn icon="Edit" />
+      <Btn icon="Delete" @click="deleteUser"/>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { defineProps, ref } from "vue";
+import Swal from "sweetalert2";
+import api from '@/axios/index';
 
+const { userId } = defineProps(['userId']);
+
+async function deleteUser(){
+  let response = await api.delete('pessoas',{
+    id: userId,
+    nome: userName.value,
+    cpf: formatDocument(userDoc.value),
+    dataNasciento: formatDateDB(userNcto.value)
+  });
+
+  console.log(response.data);
 }
+
 </script>
 
 <style lang="scss">
@@ -35,12 +54,13 @@ export default {
 
   background: $gray100;
   border-radius: $defaultRadius;
-  padding: .8rem;
+  padding: .8rem 1rem;
   display: grid;
   grid-template-columns: $size 1fr;
   align-items: center;
-  gap: 1rem;
-  min-width: 15%;
+  gap: .5rem;
+  min-width: 25%;
+  position: relative;
 
   .card__picture{
     $picSize: calc($size - 1rem);
@@ -88,6 +108,14 @@ export default {
         }
       }
     }
+  }
+
+  .card__btn{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: absolute;
+    right: 1rem;
   }
 }
 </style>

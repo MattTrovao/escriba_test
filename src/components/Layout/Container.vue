@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <main class="container">
     <div class="row">
       <slot />   
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

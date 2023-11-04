@@ -2,7 +2,7 @@ import "./sass/app.scss";
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// DEPENDENCIAS
+//DEPENDENCIAS
 import router from './router'; 
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
@@ -21,17 +21,25 @@ app.component("font-awesome-icon", FontAwesomeIcon);
 library.add(fas);
 axios.defaults.timeout = 600000;
 
-// COMPONENTS
+//COMPONENTS
 import Loading from "./components/Loading.vue"
+import Btn from "./components/Btn.vue"
+import Modal from "./components/Modal.vue"
+
 
 import Header from "./components/Layout/Header.vue"
 import Container from "./components/Layout/Container.vue"
 import Footer from "./components/Layout/Footer.vue"
+
 import User from "./components/Cards/User.vue"
 import Products from "./components/Cards/Products.vue"
 import Orders from "./components/Cards/Orders.vue"
 
+
 app.component('Loading',Loading);
+app.component('Btn',Btn);
+app.component('Modal',Modal);
+
 app.component('Header',Header);
 app.component('Container',Container);
 app.component('Footer',Footer);
@@ -40,5 +48,5 @@ app.component('Products',Products);
 app.component('Orders',Orders);
 
 
-// APP
+//APP
 app.mount("#app");

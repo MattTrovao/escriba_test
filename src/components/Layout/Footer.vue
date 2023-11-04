@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <Container>
-      <p>Site criado para teste para Escriba Curitiba por Matheus Trovão Consentino</p>
+      <p>Site criado para teste na Escriba Curitiba por Matheus Trovão Consentino</p>
     </Container>
   </footer>
 </template>

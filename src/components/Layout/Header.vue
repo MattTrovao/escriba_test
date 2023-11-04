@@ -74,7 +74,8 @@ export default {
       align-items: center;
       gap: .2rem;
 
-      &:hover{
+      &:hover,
+      &.router-link-active{
         border-radius: $innerRadius;
 
         svg,span{
@@ -83,13 +84,16 @@ export default {
         }
       }
 
+      &.router-link-active{
+        border-color: $gray500
+      }
+
       svg{
         $svgSize: 50%;
     
         width: $svgSize;
         height: $svgSize;
         color: $black;
-        transition: inherit;
       }
 
       span{

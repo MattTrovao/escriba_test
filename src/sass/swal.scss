@@ -1,0 +1,9 @@
+.swal2-container {
+  .swal2-popup{
+    border-radius: $defaultRadius;
+  }
+  .swal2-confirm{
+    background: $blue500;
+    border-radius: $innerRadius;
+  }
+}

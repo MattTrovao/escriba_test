@@ -1,13 +1,9 @@
-* {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-// WINDOW SIZE
+//WINDOW SIZE
 $mobile: 576px;
 $tablet: 992px;
 $desktop: 1280px;
 
-// FONTS
+//FONTS
 $light: 200;
 $regular: 400;
 $bold: 600;
@@ -16,7 +12,7 @@ $subtitle: 1.5rem;
 $text: 1.2rem;
 $caption: .8rem;
 
-// COLORS
+//COLORS
 $bg: #ede7e3;
 $blue100: #82c0cc;
 $blue300: #489fb5;
@@ -27,18 +23,13 @@ $yellow: #ffa62b;
 $red: #a0001c;
 $green: #007200;
 $black: #343232;
+$white: #fff;
 
-// BORDER
+//BORDER
 $defaultRadius: 8px;
 $innerRadius: 4px;
 $border: 2px solid;
 
-// GENERIC
+//GENERIC
 $transition: all ease-in-out .4s;
 $opacity: .5;
-
-// STYLES
-body{
-  font-size: 1.2rem;
-  background: $bg;
-}

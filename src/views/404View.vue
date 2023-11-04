@@ -1,10 +1,8 @@
 <template>
-  <Container>
-    <div class="notFound">
-      <h1>404</h1>
-      <h2>ERRO! A Página solicitada não existe ou não foi encontrada.</h2>
-    </div>
-  </Container>
+  <div class="notFound">
+    <h1>404</h1>
+    <h2>ERRO! A Página solicitada não existe ou não foi encontrada.</h2>
+  </div>
 </template>
 
 <script>

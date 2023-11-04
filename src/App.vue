@@ -3,7 +3,11 @@
 
 <template>
   <Header />
-  <router-view></router-view>
+  
+  <Container>
+    <router-view></router-view>
+  </Container>
+  
   <Footer />
 </template>
 

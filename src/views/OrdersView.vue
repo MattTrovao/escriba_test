@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <Container>
     <template v-if="orders == null">
       <Loading />

@@ -5,11 +5,17 @@
     </div>
     <div class="card__data">
       <div class="data__name">
-        <h2>John Doe</h2>
+        <h2>
+          <slot name="Name"/>
+        </h2>
       </div>
       <div class="data__doc">
-        <p>000.000.000-00</p>
-        <p>00/00/0000</p>
+        <p>
+          <slot name="Doc" />
+        </p>
+        <p>
+          <slot name="Ncto" />
+        </p>
       </div>
     </div>
   </div>
@@ -22,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../sass/ds.scss';
+@import '@/sass/ds.scss';
 
 .card{
   $size: 5rem;

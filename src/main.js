@@ -22,14 +22,23 @@ library.add(fas);
 axios.defaults.timeout = 600000;
 
 // COMPONENTS
+import Loading from "./components/Loading.vue"
+
 import Header from "./components/Layout/Header.vue"
 import Container from "./components/Layout/Container.vue"
-import Card from "./components/Card.vue"
+import Footer from "./components/Layout/Footer.vue"
+import User from "./components/Cards/User.vue"
+import Products from "./components/Cards/Products.vue"
+import Orders from "./components/Cards/Orders.vue"
 
+app.component('Loading',Loading);
 app.component('Header',Header);
 app.component('Container',Container);
-app.component('Card',Card);
+app.component('Footer',Footer);
+app.component('User',User);
+app.component('Products',Products);
+app.component('Orders',Orders);
+
 
 // APP
-createApp(App).mount('#app')
 app.mount("#app");

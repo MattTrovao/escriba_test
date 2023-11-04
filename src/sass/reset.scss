@@ -10,6 +10,7 @@ a{
 }
 
 a,button{
+  border: none;
   transition: $transition;
   cursor: pointer;
 }

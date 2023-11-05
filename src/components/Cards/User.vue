@@ -27,21 +27,31 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from "vue";
+import { defineProps, defineEmits, ref } from "vue";
 import Swal from "sweetalert2";
-import api from '@/axios/index';
+import api from '../../axios/index';
 
 const { userId } = defineProps(['userId']);
+const userDelete = defineEmits(['deletion-success']);
 
-async function deleteUser(){
-  let response = await api.delete('pessoas',{
-    id: userId,
-    nome: userName.value,
-    cpf: formatDocument(userDoc.value),
-    dataNasciento: formatDateDB(userNcto.value)
-  });
 
-  console.log(response.data);
+async function deleteUser() {
+  let response = await api.delete(`pessoas/${userId}`);
+
+  if(response.status == 200){
+    Swal.fire({
+      icon: 'success',
+      title: 'Sucesso!',
+      text: 'Usuário deletado com sucesso!',
+    })
+    userDelete('deletion-success');
+  }else{
+      Swal.fire({
+      icon: 'error',
+      title: 'Erro!',
+      text: 'Algum erro desconhecido ocorreu, entre em contato com o administrador do sistema.',
+    })
+  }
 }
 
 </script>

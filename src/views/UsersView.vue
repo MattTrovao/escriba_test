@@ -40,7 +40,10 @@
 
     <template v-for="user in users" :key="user.id">
 
-      <User :userId="user.id">
+      <User 
+        :userId="user.id"
+        @deletion-success="handleDeletionSuccess"
+      >
         <template #Name>
           {{user.nome}}
         </template>
@@ -127,6 +130,11 @@ async function saveUser(){
     })
   }
 }
+
+//Delete
+const handleDeletionSuccess = (deletedPersonId) => {
+  getUsers()
+};
 
 onMounted(() => {
   getUsers();

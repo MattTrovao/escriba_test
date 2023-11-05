@@ -2,6 +2,8 @@
 
 Projeto feito como teste para vaga de desenvolvedor Front-End.
 
+[GitHub](https://github.com/MattTrovao/escriba_test)
+
 ---
 
 ## Rodando o Projeto

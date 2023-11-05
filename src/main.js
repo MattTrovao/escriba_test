@@ -22,27 +22,29 @@ library.add(fas);
 axios.defaults.timeout = 600000;
 
 //COMPONENTS
-import Loading from "./components/Loading.vue"
-import Btn from "./components/Btn.vue"
-import Modal from "./components/Modal.vue"
+import Btn from "./components/Ui/Btn.vue"
+import Modal from "./components/Ui/Modal.vue"
 
 
 import Header from "./components/Layout/Header.vue"
 import Container from "./components/Layout/Container.vue"
 import Footer from "./components/Layout/Footer.vue"
+import Loading from "./components/Layout/Loading.vue"
+
 
 import User from "./components/Cards/User.vue"
 import Products from "./components/Cards/Products.vue"
 import Orders from "./components/Cards/Orders.vue"
 
 
-app.component('Loading',Loading);
 app.component('Btn',Btn);
 app.component('Modal',Modal);
 
 app.component('Header',Header);
 app.component('Container',Container);
 app.component('Footer',Footer);
+app.component('Loading',Loading);
+
 app.component('User',User);
 app.component('Products',Products);
 app.component('Orders',Orders);

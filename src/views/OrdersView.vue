@@ -33,7 +33,6 @@ async function getOrders() {
     //Fake time para simular delay da Api
     setTimeout(() => {
       orders.value = response.data;
-      console.log(orders.value);
     }, 2000);
   }
 }

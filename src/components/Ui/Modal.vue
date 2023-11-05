@@ -51,6 +51,8 @@ const closeModal = () => {
   inset: 0;
   z-index: 100;
   background: rgba($black, .7);
+
+  animation: toogleVision ease-in-out .4s;
 }
 
 .modal{
@@ -63,6 +65,9 @@ const closeModal = () => {
   padding: 2rem;
   border-radius: $defaultRadius;
   background: $white;
+
+  animation: toogleVision ease-in-out .45s;
+
 
   .modal__close{
     $location: 1rem;
@@ -79,5 +84,14 @@ const closeModal = () => {
       font-weight: $bold;
     }
   }
+
+  @media screen and (max-width: $mobile) {
+    width: 70vw;
+  }
+}
+
+@keyframes toogleVision {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 </style>

@@ -102,6 +102,15 @@ export default {
         transition: inherit;
         text-transform: capitalize;
       }
+
+      @media screen and (max-width: $mobile) {
+        width: 3.2rem;
+        height: 3.2rem;
+
+        span{
+          font-size: .6rem;
+        }
+      }
     }
   }
 

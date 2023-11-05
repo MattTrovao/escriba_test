@@ -6,7 +6,7 @@
       </h1>
     </div>
 
-    <div class="orders__info">
+    <div class="order__info">
       <h2 class="info__date">
         <small>Data:</small>
         <slot name="Date" />
@@ -60,7 +60,7 @@ const { itens } = defineProps(['itens']);
     }
   }
 
-  .orders__info{
+  .order__info{
     margin: 2rem 0;
     padding: 1rem 0;
     border: $border rgba($black,.5);
@@ -87,23 +87,45 @@ const { itens } = defineProps(['itens']);
     display: flex;
     justify-content: space-evenly;
     gap: 2rem;
-    .prod__name {
-      border-bottom: $border $black;
-      padding: 0 2rem;
-      margin-bottom: 1rem;
-      font-size: $subtitle;
-    }
-    .prod__value{
-      & > *{
-        text-align: center;
-      }
-      .value__total{
-        color: $green;
+    .item__prod{
+      .prod__name {
+        border-bottom: $border $black;
+        padding: 0 2rem;
+        margin-bottom: 1rem;
         font-size: $subtitle;
       }
-      .value__count{
-        color: $black;
-        font-size: $caption;
+      .prod__value{
+        & > *{
+          text-align: center;
+        }
+        .value__total{
+          color: $green;
+          font-size: $subtitle;
+        }
+        .value__count{
+          color: $black;
+          font-size: $caption;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: 1.5rem .8rem;
+
+    .order__info,
+    .order__intem{
+      padding: 0.5rem;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .order__item{
+      .item__prod{
+        .prod__name{
+          font-size: 1.2rem;
+          padding: 0 .8rem;
+        }
       }
     }
   }

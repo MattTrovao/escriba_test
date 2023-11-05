@@ -13,10 +13,16 @@
       "dataNascimento": "1999-12-31"
     },
     {
+      "id": 3,
+      "nome": "Teste",
+      "cpf": "989.384.140-27",
+      "dataNascimento": "1997-05-28"
+    },
+    {
       "id": 4,
-      "nome": "zezinho",
-      "cpf": "000.111.222-33",
-      "dataNasciento": "1997-05-14"
+      "nome": "Lucas",
+      "cpf": "047.752.470-26",
+      "dataNascimento": "1998-05-14"
     }
   ],
   "produtos": [

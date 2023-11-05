@@ -43,6 +43,7 @@
       <User 
         :userId="user.id"
         @deletion-success="handleDeletionSuccess"
+        @edit-success="handleEditSuccess"
       >
         <template #Name>
           {{user.nome}}
@@ -103,7 +104,7 @@ async function saveUser(){
       id: usersLength.value + 1,
       nome: userName.value,
       cpf: formatDocument(userDoc.value),
-      dataNasciento: formatDateDB(userNcto.value)
+      dataNascimento: formatDateDB(userNcto.value)
     });
 
 
@@ -133,6 +134,11 @@ async function saveUser(){
 
 //Delete
 const handleDeletionSuccess = (deletedPersonId) => {
+  getUsers()
+};
+
+//Edit
+const handleEditSuccess = (deletedPersonId) => {
   getUsers()
 };
 

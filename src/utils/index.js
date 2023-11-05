@@ -81,3 +81,11 @@ export const formatDocument = (doc) => {
     "$1.$2.$3-$4"
   );
 };
+
+export const cleanDocument = (doc) => {
+  const documentFormated = doc.replace(/\D/g, "");
+  return documentFormated.replace(
+    /(\d{3})(\d{3})(\d{3})(\d{2})/,
+    "$1$2$3$4"
+  );
+};
